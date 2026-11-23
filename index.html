@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دليل زكي 🤖 | أنيميشن فايرل بـ Claude</title>
+<meta name="description" content="الخطوات كاملة لصناعة فيديوهات أنيميشن فايرل باستخدام Claude و Higgsfield">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#07102b;--card:#0f1c44;--line:#22356e;--gold:#f2c14e;--gold2:#ffdd85;--text:#eef2ff;--muted:#a9b6dc;--ok:#3ddc97}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Tajawal,system-ui,sans-serif;color:var(--text);
+    background:radial-gradient(1200px 700px at 50% -10%,#1b2f74 0%,var(--bg) 60%) fixed;line-height:1.75}
+  .wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+  header{text-align:center;padding:18px 0 8px}
+  .bot{font-size:64px;filter:drop-shadow(0 0 18px rgba(242,193,78,.45))}
+  h1{font-size:30px;font-weight:900;margin:6px 0 4px;background:linear-gradient(90deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);margin:0}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),var(--card);
+    border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;margin:16px 0;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .step{display:flex;gap:14px;align-items:flex-start}
+  .num{flex:0 0 42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:20px;color:#1a1200;
+    background:linear-gradient(135deg,var(--gold2),var(--gold));box-shadow:0 0 16px rgba(242,193,78,.5)}
+  h2{margin:4px 0 6px;font-size:20px}
+  ol,ul{margin:6px 0;padding-inline-start:22px}
+  li{margin:3px 0}
+  b,strong{color:var(--gold2)}
+  .en{direction:ltr;unicode-bidi:isolate;font-family:system-ui,sans-serif;background:#0a1534;border:1px solid var(--line);
+    padding:1px 7px;border-radius:7px;font-size:.92em;color:#fff}
+  .btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:700;
+    padding:11px 18px;border-radius:12px;color:#1a1200;background:linear-gradient(135deg,var(--gold2),var(--gold));text-decoration:none}
+  .btn.ghost{background:#0a1534;color:var(--text);border:1px solid var(--line)}
+  .prompt{position:relative;background:#06102a;border:1px dashed #3a4f92;border-radius:12px;padding:14px 14px 54px;margin-top:10px;white-space:pre-wrap;font-size:15px}
+  .prompt .btn{position:absolute;bottom:10px;left:10px;padding:7px 14px;font-size:14px}
+  .tip{border-color:#5a4a16;background:linear-gradient(180deg,rgba(242,193,78,.10),rgba(242,193,78,.03)),var(--card)}
+  .follow{text-align:center}
+  .muted{color:var(--muted);font-size:14px}
+  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ok);color:#002313;font-weight:700;
+    padding:10px 18px;border-radius:999px;opacity:0;transition:.3s;pointer-events:none}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="bot">🤖</div>
+    <h1>دليل زكي: أنيميشن فايرل بـ Claude</h1>
+    <p class="sub">الخطوات كاملة، خطوة بخطوة، حتى لو أول مرة تستخدم Claude</p>
+  </header>
+
+  <div class="card">
+    <div class="step"><div class="num">1</div><div>
+      <h2>أضف Higgsfield إلى Claude</h2>
+      <ol>
+        <li>افتح <span class="en">claude.ai</span> وسجّل دخولك (الحساب المجاني يكفي للتجربة).</li>
+        <li>اضغط على اسمك تحت ← <b>Settings</b> (الإعدادات) ← <b>Connectors</b>.</li>
+        <li>اضغط <b>Browse connectors</b> وابحث عن <span class="en">Higgsfield</span> ثم <b>Connect</b>.</li>
+        <li>سجّل دخولك في Higgsfield واضغط <b>Allow</b>.</li>
+      </ol>
+      <p class="muted">Higgsfield هو اللي يولّد الصور والفيديو، و Claude هو المخرج اللي يكتب ويرتّب كل شي.</p>
+    </div></div>
+  </div>
+
+  <div class="card">
+    <div class="step"><div class="num">2</div><div>
+      <h2>ارفع سكل الأنيميشن وفعّل تنفيذ الكود</h2>
+      <p>السكل هو "تعليمات المخرج" اللي تخلي Claude يشتغل بطريقة الفيديوهات الفايرل.</p>
+      <p><button class="btn" id="dl">⬇️ حمّل سكل زكي للأنيميشن</button></p>
+      <ol>
+        <li>في Claude: <b>Settings</b> ← <b>Capabilities</b> وفعّل <span class="en">Code execution and file creation</span>.</li>
+        <li>في نفس الصفحة، تحت <b>Skills</b> اضغط <b>Upload skill</b> واختر الملف اللي حمّلته <span class="en">zaki-animation-skill.zip</span>.</li>
+        <li>تأكد إن السكل صار مفعّل ✅.</li>
+      </ol>
+    </div></div>
+  </div>
+
+  <div class="card">
+    <div class="step"><div class="num">3</div><div>
+      <h2>اطلب سكربت فايرل</h2>
+      <p>افتح محادثة جديدة في Claude وانسخ هذا الطلب، وغيّر الموضوع والستايل على كيفك:</p>
+      <div class="prompt" id="p1">استخدم سكل zaki-viral-animation.
+أبي فيديو أنيميشن فايرل مدته 40 ثانية بالعربي عن:
+[اكتب الموضوع هنا، مثال: ليش القطط تطيح على رجولها دايماً؟]
+الستايل: [3D كرتون مثل أفلام بيكسار]
+ابدأ بالسكربت، وبعدها خطة المشاهد، ولا تولّد أي صورة قبل ما أوافق.<button class="btn" data-copy="p1">📋 نسخ</button></div>
+    </div></div>
+  </div>
+
+  <div class="card">
+    <div class="step"><div class="num">4</div><div>
+      <h2>وافق على المشاهد… وبعدها ولّد</h2>
+      <ol>
+        <li>Claude بيعطيك السكربت ← وافق أو اطلب تعديل.</li>
+        <li>بعدها خطة المشاهد (6 إلى 10 مشاهد) ← وافق.</li>
+        <li>يولّد الصور أول، وبعد موافقتك يحرّكها لمقاطع فيديو.</li>
+        <li>اجمع المقاطع في CapCut، أضف الصوت والكلام المكتوب… وفيديوك جاهز 🎬</li>
+      </ol>
+    </div></div>
+  </div>
+
+  <div class="card tip">
+    <h2>💡 نصيحة ذهبية</h2>
+    <p>كل توليد في Higgsfield يصرف <b>كريدت</b>. خلّ Claude يجهّز السكربت والمشاهد <b>أول</b>، وما تولّد إلا بعد ما تكون راضي عن الخطة. كذا ما تضيّع ولا كريدت.</p>
+    <div class="prompt" id="p2">قبل ما تولّد أي شي، اعرض لي كل المشاهد مع البرومبت حقها، وانتظر موافقتي على كل مشهد.<button class="btn" data-copy="p2">📋 نسخ</button></div>
+  </div>
+
+  <div class="card follow">
+    <h2>تبي المزيد؟ 🤖</h2>
+    <p>تابع زكي، كل أسبوع أداة ذكاء اصطناعي جديدة بخطوات سهلة.</p>
+    <a class="btn" href="https://www.instagram.com/zaki._ai/" target="_blank" rel="noopener">تابع @zaki._ai على إنستغرام</a>
+  </div>
+
+  <footer>صُنع بحب بواسطة زكي 🤖 · الأسماء التجارية Claude و Higgsfield ملك لأصحابها</footer>
+</div>
+<div class="toast" id="toast">تم النسخ ✅</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+  const toast=(t)=>{const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1600)};
+  document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+    const box=document.getElementById(b.dataset.copy).cloneNode(true);box.querySelector('button').remove();
+    const text=box.textContent.trim();
+    try{await navigator.clipboard.writeText(text)}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+    toast('تم النسخ ✅');
+  }));
+  document.getElementById('dl').addEventListener('click',async()=>{
+    try{
+      const md=await (await fetch('zaki-animation-skill/SKILL.md',{cache:'no-store'})).text();
+      const zip=new JSZip();zip.folder('zaki-animation-skill').file('SKILL.md',md);
+      const blob=await zip.generateAsync({type:'blob'});
+      const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='zaki-animation-skill.zip';a.click();
+      toast('تم التحميل ✅');
+    }catch(e){location.href='zaki-animation-skill/SKILL.md'}
+  });
+</script>
+</body>
+</html>
