@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zaki's Guide 🤖 | Viral video styles with Claude + Creago</title>
+<meta name="description" content="How to make the same viral video styles with Claude and Creago">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#07102b;--card:#0f1c44;--line:#22356e;--gold:#f2c14e;--gold2:#ffdd85;--text:#eef2ff;--muted:#a9b6dc;--ok:#3ddc97}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Poppins,system-ui,sans-serif;color:var(--text);
+    background:radial-gradient(1200px 700px at 50% -10%,#1b2f74 0%,var(--bg) 60%) fixed;line-height:1.75}
+  .wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+  header{text-align:center;padding:18px 0 8px}
+  .bot{font-size:64px;filter:drop-shadow(0 0 18px rgba(242,193,78,.45))}
+  h1{font-size:30px;font-weight:900;margin:6px 0 4px;background:linear-gradient(90deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);margin:0}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),var(--card);
+    border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;margin:16px 0;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .step{display:flex;gap:14px;align-items:flex-start}
+  .num{flex:0 0 42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:20px;color:#1a1200;
+    background:linear-gradient(135deg,var(--gold2),var(--gold));box-shadow:0 0 16px rgba(242,193,78,.5)}
+  h2{margin:4px 0 6px;font-size:20px}
+  ol,ul{margin:6px 0;padding-inline-start:22px}
+  li{margin:3px 0}
+  b,strong{color:var(--gold2)}
+  .en{direction:ltr;unicode-bidi:isolate;font-family:system-ui,sans-serif;background:#0a1534;border:1px solid var(--line);
+    padding:1px 7px;border-radius:7px;font-size:.92em;color:#fff}
+  .btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:700;
+    padding:11px 18px;border-radius:12px;color:#1a1200;background:linear-gradient(135deg,var(--gold2),var(--gold));text-decoration:none}
+  .btn.ghost{background:#0a1534;color:var(--text);border:1px solid var(--line)}
+  .prompt{position:relative;background:#06102a;border:1px dashed #3a4f92;border-radius:12px;padding:14px 14px 54px;margin-top:10px;white-space:pre-wrap;font-size:15px}
+  .prompt .btn{position:absolute;bottom:10px;right:10px;padding:7px 14px;font-size:14px}
+  .tip{border-color:#5a4a16;background:linear-gradient(180deg,rgba(242,193,78,.10),rgba(242,193,78,.03)),var(--card)}
+  .follow{text-align:center}
+  .muted{color:var(--muted);font-size:14px}
+  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ok);color:#002313;font-weight:700;
+    padding:10px 18px;border-radius:999px;opacity:0;transition:.3s;pointer-events:none}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="bot">🤖</div>
+    <h1>Viral video styles… made with Claude</h1>
+    <p class="sub">The link I promised you + the full steps</p>
+  </header>
+
+  <div class="card">
+    <h2>🎯 The idea in 20 seconds</h2>
+    <p>Claude doesn't "generate" video like AI video apps. It <b>writes code</b>, and the code draws every frame. That's why the video stays clean: nothing melts or jitters, and you can change a single line.</p>
+    <p>The catch: your first try usually looks like shapes sliding around, because a style is hundreds of decisions (colors, camera, timing, sound). That's where <span class="en">Creago</span> comes in: 50+ ready-made styles studied from viral videos.</p>
+  </div>
+
+  <div class="card">
+    <div class="step"><div class="num">1</div><div>
+      <h2>Browse the styles</h2>
+      <p>Open the style library. You can watch every style as a video before you decide:</p>
+      <p><a class="btn" href="https://creagoai.com/library.html" target="_blank" rel="noopener">🎬 Open the style library</a></p>
+      <p class="muted">Styles like wordless drawn stories, maps with a flying camera, ink-and-gold history, and more.</p>
+    </div></div>
+  </div>
+
+  <div class="card">
+    <div class="step"><div class="num">2</div><div>
+      <h2>Connect Creago to Claude</h2>
+      <ol>
+        <li>Creago works with <span class="en">Claude Code</span> (also Codex, Cursor and Gemini CLI).</li>
+        <li>Buy Creago on their website (one-time payment, no subscription).</li>
+        <li>In Claude Code, give it this link. It connects by itself; sign in once:</li>
+      </ol>
+      <div class="prompt" id="p0">creagoai.com/mcp<button class="btn" data-copy="p0">📋 Copy</button></div>
+    </div></div>
+  </div>
+
+  <div class="card">
+    <div class="step"><div class="num">3</div><div>
+      <h2>Type your idea in one line</h2>
+      <p>Pick a style number from the library (for example C001) and ask like this:</p>
+      <div class="prompt" id="p1">Make me a 60-second video about [your idea here], in style C001. Show me the script and the first few seconds before you continue.<button class="btn" data-copy="p1">📋 Copy</button></div>
+      <p class="muted">Creago shows you the script, the look and the first seconds, and only continues after you approve. Then it animates the scenes, adds voice and music, and saves an MP4.</p>
+    </div></div>
+  </div>
+
+  <div class="card tip">
+    <h2>💡 Before you buy</h2>
+    <ul>
+      <li>Creago costs <b>$50 one-time</b> (per their website when this page was written).</li>
+      <li>You need your own plan for the coding app (like Claude Code), and voiceover needs your own voice-service API key.</li>
+      <li>Want to try for free first? Check Zaki's free Claude animation guide:</li>
+    </ul>
+    <p><a class="btn ghost" href="https://zaki-dm.github.io/">🤖 Zaki's free guide</a></p>
+  </div>
+
+  <div class="card follow">
+    <h2>Want more? 🤖</h2>
+    <p>Follow Zaki for a new AI tool every week, explained in simple steps.</p>
+    <a class="btn" href="https://www.instagram.com/zaki._ai/" target="_blank" rel="noopener">Follow @zaki._ai on Instagram</a>
+  </div>
+
+  <footer>Made with love by Zaki 🤖 · Zaki is not affiliated with Creago or Anthropic · Trademarks belong to their owners</footer>
+</div>
+<div class="toast" id="toast">Copied ✅</div>
+<script>
+  const toast=(t)=>{const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1600)};
+  document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+    const box=document.getElementById(b.dataset.copy).cloneNode(true);box.querySelector('button').remove();
+    const text=box.textContent.trim();
+    try{await navigator.clipboard.writeText(text)}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+    toast('Copied ✅');
+  }));
+</script>
+</body>
+</html>
