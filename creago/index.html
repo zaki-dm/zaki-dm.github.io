@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دليل زكي 🤖 | ستايلات فايرل بـ Claude و Creago</title>
+<meta name="description" content="كيف تسوي نفس ستايلات الفيديوهات الفايرل بـ Claude مع أداة Creago">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#07102b;--card:#0f1c44;--line:#22356e;--gold:#f2c14e;--gold2:#ffdd85;--text:#eef2ff;--muted:#a9b6dc;--ok:#3ddc97}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Tajawal,system-ui,sans-serif;color:var(--text);
+    background:radial-gradient(1200px 700px at 50% -10%,#1b2f74 0%,var(--bg) 60%) fixed;line-height:1.75}
+  .wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+  header{text-align:center;padding:18px 0 8px}
+  .bot{font-size:64px;filter:drop-shadow(0 0 18px rgba(242,193,78,.45))}
+  h1{font-size:30px;font-weight:900;margin:6px 0 4px;background:linear-gradient(90deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);margin:0}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),var(--card);
+    border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;margin:16px 0;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+  .step{display:flex;gap:14px;align-items:flex-start}
+  .num{flex:0 0 42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:20px;color:#1a1200;
+    background:linear-gradient(135deg,var(--gold2),var(--gold));box-shadow:0 0 16px rgba(242,193,78,.5)}
+  h2{margin:4px 0 6px;font-size:20px}
+  ol,ul{margin:6px 0;padding-inline-start:22px}
+  li{margin:3px 0}
+  b,strong{color:var(--gold2)}
+  .en{direction:ltr;unicode-bidi:isolate;font-family:system-ui,sans-serif;background:#0a1534;border:1px solid var(--line);
+    padding:1px 7px;border-radius:7px;font-size:.92em;color:#fff}
+  .btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:inherit;font-weight:700;
+    padding:11px 18px;border-radius:12px;color:#1a1200;background:linear-gradient(135deg,var(--gold2),var(--gold));text-decoration:none}
+  .btn.ghost{background:#0a1534;color:var(--text);border:1px solid var(--line)}
+  .prompt{position:relative;background:#06102a;border:1px dashed #3a4f92;border-radius:12px;padding:14px 14px 54px;margin-top:10px;white-space:pre-wrap;font-size:15px}
+  .prompt .btn{position:absolute;bottom:10px;left:10px;padding:7px 14px;font-size:14px}
+  .tip{border-color:#5a4a16;background:linear-gradient(180deg,rgba(242,193,78,.10),rgba(242,193,78,.03)),var(--card)}
+  .follow{text-align:center}
+  .muted{color:var(--muted);font-size:14px}
+  footer{text-align:center;color:var(--muted);font-size:13px;margin-top:26px}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ok);color:#002313;font-weight:700;
+    padding:10px 18px;border-radius:999px;opacity:0;transition:.3s;pointer-events:none}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="bot">🤖</div>
+    <h1>ستايلات الفيديوهات الفايرل… بـ Claude</h1>
+    <p class="sub">الرابط اللي وعدتك فيه + الخطوات كاملة</p>
+  </header>
+
+  <div class="card">
+    <h2>🎯 الفكرة باختصار</h2>
+    <p>Claude ما "يولّد" فيديو مثل تطبيقات الذكاء الاصطناعي، هو <b>يكتب كود</b> والكود يرسم كل فريم. عشان كذا الفيديو ثابت، ما يذوب ولا يرجف، وتقدر تعدّل سطر واحد بس.</p>
+    <p>المشكلة إن أول محاولة تطلع أشكال تتزحلق… لأن الستايل مئات القرارات (ألوان، كاميرا، توقيت، صوت). وهنا يجي <span class="en">Creago</span>: أكثر من 50 ستايل جاهز مدروس من فيديوهات فايرل.</p>
+  </div>
+
+  <div class="card">
+    <div class="step"><div class="num">1</div><div>
+      <h2>تصفّح الستايلات وشوفها</h2>
+      <p>افتح مكتبة الستايلات، تقدر تشوف كل ستايل كفيديو قبل ما تقرر:</p>
+      <p><a class="btn" href="https://creagoai.com/library.html" target="_blank" rel="noopener">🎬 افتح مكتبة الستايلات</a></p>
+      <p class="muted">فيها ستايلات مثل: قصة بالرسم بدون كلام، خريطة بكاميرا طايرة، تاريخ بالحبر والذهب، وغيرها.</p>
+    </div></div>
+  </div>
+
+  <div class="card">
+    <div class="step"><div class="num">2</div><div>
+      <h2>اربط Creago بـ Claude</h2>
+      <ol>
+        <li>Creago يشتغل مع <span class="en">Claude Code</span> (ويدعم Codex و Cursor و Gemini CLI).</li>
+        <li>من موقعهم اشترِ Creago (دفعة وحدة، بدون اشتراك).</li>
+        <li>في Claude Code أعطه هذا الرابط وهو يتصل لحاله، وسجّل دخولك مرة وحدة:</li>
+      </ol>
+      <div class="prompt" id="p0">creagoai.com/mcp<button class="btn" data-copy="p0">📋 نسخ</button></div>
+    </div></div>
+  </div>
+
+  <div class="card">
+    <div class="step"><div class="num">3</div><div>
+      <h2>اكتب فكرتك بسطر واحد</h2>
+      <p>اختار رقم الستايل من المكتبة (مثلاً C001) واكتب طلبك كذا:</p>
+      <div class="prompt" id="p1">سو لي فيديو مدته 60 ثانية عن [اكتب فكرتك هنا]، بالعربي، بستايل C001. اعرض لي السكربت وأول ثواني قبل ما تكمل.<button class="btn" data-copy="p1">📋 نسخ</button></div>
+      <p class="muted">Creago يعرض عليك السكربت والشكل وأول الثواني، وما يكمل إلا بعد موافقتك، وبعدها يحرّك المشاهد ويضيف الصوت والموسيقى ويحفظ الفيديو MP4.</p>
+    </div></div>
+  </div>
+
+  <div class="card tip">
+    <h2>💡 قبل ما تشتري</h2>
+    <ul>
+      <li>Creago سعره <b>50 دولار مرة وحدة</b> (حسب موقعهم وقت كتابة الصفحة).</li>
+      <li>يحتاج اشتراكك الخاص في تطبيق الكود (مثل Claude Code)، والصوت يحتاج مفتاح خدمة صوت خاص فيك.</li>
+      <li>تبي تجرّب ببلاش أول؟ جرّب دليل زكي المجاني للأنيميشن بـ Claude:</li>
+    </ul>
+    <p><a class="btn ghost" href="https://zaki-dm.github.io/">🤖 دليل زكي المجاني</a></p>
+  </div>
+
+  <div class="card follow">
+    <h2>تبي المزيد؟ 🤖</h2>
+    <p>تابع زكي، كل أسبوع أداة ذكاء اصطناعي جديدة بخطوات سهلة.</p>
+    <a class="btn" href="https://www.instagram.com/zaki._ai/" target="_blank" rel="noopener">تابع @zaki._ai على إنستغرام</a>
+  </div>
+
+  <footer>صُنع بحب بواسطة زكي 🤖 · زكي غير تابع لـ Creago أو Anthropic · الأسماء التجارية ملك لأصحابها</footer>
+</div>
+<div class="toast" id="toast">تم النسخ ✅</div>
+<script>
+  const toast=(t)=>{const e=document.getElementById('toast');e.textContent=t;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1600)};
+  document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+    const box=document.getElementById(b.dataset.copy).cloneNode(true);box.querySelector('button').remove();
+    const text=box.textContent.trim();
+    try{await navigator.clipboard.writeText(text)}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}
+    toast('تم النسخ ✅');
+  }));
+</script>
+</body>
+</html>
